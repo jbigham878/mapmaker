@@ -725,6 +725,12 @@ body {
 
 .compare-cancel-btn:hover { color: var(--british); border-color: var(--british); }
 
+.compare-error {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #ef4444;
+}
+
 .compare-active-bar {
   display: flex;
   align-items: center;

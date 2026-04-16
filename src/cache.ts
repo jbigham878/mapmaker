@@ -4,6 +4,7 @@ const CACHE_KEY = 'mapmaker-battle-cache'
 
 interface CacheEntry {
   data: BattleData
+  ts: number
 }
 
 type BattleCache = Record<string, CacheEntry>
@@ -20,14 +21,28 @@ function readCache(): BattleCache {
   }
 }
 
+const MAX_CACHE_BYTES = 4_000_000 // 4MB — stay well under 5MB localStorage limit
+
+function evict(cache: BattleCache): BattleCache {
+  const entries = Object.entries(cache).sort((a, b) => (b[1].ts ?? 0) - (a[1].ts ?? 0))
+  // Keep newest half
+  const keep = entries.slice(0, Math.max(1, Math.floor(entries.length / 2)))
+  return Object.fromEntries(keep)
+}
+
 function writeCache(cache: BattleCache): void {
   try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
+    let json = JSON.stringify(cache)
+    if (json.length > MAX_CACHE_BYTES) {
+      cache = evict(cache)
+      json = JSON.stringify(cache)
+    }
+    localStorage.setItem(CACHE_KEY, json)
   } catch {
-    // localStorage full — clear old entries and try once more
+    // localStorage quota exceeded — evict and retry once
     try {
-      localStorage.removeItem(CACHE_KEY)
-      localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
+      const evicted = evict(cache)
+      localStorage.setItem(CACHE_KEY, JSON.stringify(evicted))
     } catch { /* give up silently */ }
   }
 }
@@ -40,7 +55,7 @@ export function getCached(query: string): BattleData | null {
 
 export function setCached(query: string, data: BattleData): void {
   const cache = readCache()
-  cache[normalizeKey(query)] = { data }
+  cache[normalizeKey(query)] = { data, ts: Date.now() }
   writeCache(cache)
 }
 

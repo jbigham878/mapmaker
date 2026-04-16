@@ -38,6 +38,7 @@ interface Props {
   activeCampaign: ActiveCampaign | null
   compareBattle: BattleData | null
   compareLoading: boolean
+  compareError: string | null
   activeView: 'main' | 'compare'
   onCompareSubmit: (query: string) => void
   onExitCompare: () => void
@@ -49,7 +50,7 @@ type Tab = 'battles' | 'campaigns'
 export default function BattlePanel({
   battle, loading, error, onSubmit, onSelectHistory, onRemoveHistory,
   onStartCampaign, onCampaignNav, onExitCampaign, history, activeCampaign,
-  compareBattle, compareLoading, activeView, onCompareSubmit, onExitCompare, onSwitchView,
+  compareBattle, compareLoading, compareError, activeView, onCompareSubmit, onExitCompare, onSwitchView,
 }: Props) {
   const [compareQuery, setCompareQuery] = useState('')
   const [showCompareInput, setShowCompareInput] = useState(false)
@@ -97,10 +98,10 @@ export default function BattlePanel({
   }
 
   function selectSuggestion(name: string) {
+    onSubmit(name)
     setQuery(name)
     setShowSuggestions(false)
     setFocusedIdx(-1)
-    onSubmit(name)
   }
 
   function handleKeyDown(e: React.KeyboardEvent) {
@@ -180,7 +181,6 @@ export default function BattlePanel({
               onKeyDown={handleKeyDown}
               placeholder="e.g. Battle of Bunker Hill"
               disabled={loading}
-              autoFocus
               autoComplete="off"
             />
             {showSuggestions && suggestions.length > 0 && (
@@ -267,6 +267,7 @@ export default function BattlePanel({
                   </button>
                   <button className="compare-cancel-btn" onClick={() => setShowCompareInput(false)}>✕</button>
                 </div>
+                {compareError && <div className="compare-error">{compareError}</div>}
               </div>
             )}
             {compareMode && (

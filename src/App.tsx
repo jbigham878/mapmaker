@@ -34,6 +34,7 @@ export default function App() {
   // Compare mode
   const [compareBattle, setCompareBattle] = useState<BattleData | null>(null)
   const [compareLoading, setCompareLoading] = useState(false)
+  const [compareError, setCompareError]   = useState<string | null>(null)
   const [activeView, setActiveView]       = useState<'main' | 'compare'>('main')
 
   const displayBattle = activeView === 'compare' && compareBattle ? compareBattle : battle
@@ -115,8 +116,8 @@ export default function App() {
   async function handleCompareSubmit(query: string) {
     if (!query.trim() || compareLoading) return
     const cached = getCached(query)
-    if (cached) { setCompareBattle(cached); setActiveView('compare'); return }
-    setCompareLoading(true)
+    if (cached) { setCompareBattle(cached); setCompareError(null); setActiveView('compare'); return }
+    setCompareLoading(true); setCompareError(null)
     try {
       const res  = await fetch('/api/generate-map', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ query }) })
       const data = await res.json()
@@ -125,11 +126,11 @@ export default function App() {
       setCompareBattle(data as BattleData)
       setActiveView('compare')
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Compare failed')
+      setCompareError(e instanceof Error ? e.message : 'Compare failed')
     } finally { setCompareLoading(false) }
   }
 
-  function handleExitCompare() { setCompareBattle(null); setActiveView('main') }
+  function handleExitCompare() { setCompareBattle(null); setCompareError(null); setActiveView('main') }
 
   function handleSelectHistory(b: BattleData) { setBattle(b); setError(null); setActiveCampaign(null); setActiveView('main') }
   function handleRemoveHistory(name: string) {
@@ -177,6 +178,7 @@ export default function App() {
           activeCampaign={activeCampaign}
           compareBattle={compareBattle}
           compareLoading={compareLoading}
+          compareError={compareError}
           activeView={activeView}
           onCompareSubmit={handleCompareSubmit}
           onExitCompare={handleExitCompare}
