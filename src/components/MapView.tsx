@@ -1,10 +1,62 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import L from 'leaflet'
 import {
   MapContainer, TileLayer, CircleMarker, Polyline, Polygon, Marker, Popup, Tooltip, useMap,
 } from 'react-leaflet'
 import { Fragment } from 'react'
 import { BattleData, Side } from '../types'
+
+const FUN_FACTS = [
+  "The muskets used at Bunker Hill were so inaccurate that soldiers were ordered to hold fire until they could 'see the whites of their eyes.'",
+  "George Washington crossed the Delaware on Christmas night 1776 in a blizzard — the Hessians at Trenton were caught completely off guard.",
+  "The Battle of Saratoga is considered the turning point of the Revolution — it convinced France to openly ally with America.",
+  "At Cowpens, Daniel Morgan deliberately placed his least experienced militia in front so they could retreat without breaking the battle line.",
+  "The 'shot heard 'round the world' at Lexington and Concord — nobody knows which side fired first.",
+  "The Civil War produced more American casualties than all other U.S. wars combined.",
+  "Ulysses S. Grant received over 50,000 casualties in just six weeks during the Overland Campaign of 1864.",
+  "The Battle of Gettysburg lasted three days and involved around 160,000 soldiers — the largest battle ever fought in North America.",
+  "At Antietam, the single bloodiest day in American military history, nearly 23,000 men fell in 12 hours.",
+  "The Confederates at Fredericksburg were so well-positioned that Union soldiers called the stone wall they defended 'a slaughter pen.'",
+  "Francis Marion, the 'Swamp Fox,' used guerrilla tactics in South Carolina so effectively the British called him 'the devil in the swamp.'",
+  "The last major battle of the Revolution at Yorktown was won largely because the French navy blocked British reinforcements.",
+  "During the War of 1812, British forces burned the White House. Dolley Madison saved a portrait of Washington before fleeing.",
+  "Andrew Jackson's victory at New Orleans was fought two weeks after the war had officially ended — word hadn't arrived yet.",
+  "The charge of Pickett's division at Gettysburg covered nearly a mile of open ground under direct artillery and rifle fire.",
+  "Black soldiers made up roughly 10% of the Union Army by the war's end — about 180,000 men served in the United States Colored Troops.",
+  "The ironclad warships USS Monitor and CSS Virginia (Merrimack) fought the world's first battle between iron-hulled ships in 1862.",
+  "William Prescott's militia at Bunker Hill ran so low on gunpowder that soldiers resorted to throwing rocks at the British.",
+  "The term 'seeing the elephant' was Civil War slang for experiencing combat for the first time.",
+  "At the Battle of Monmouth in 1778, Molly Pitcher (Mary Ludwig Hays) reportedly took over her husband's cannon when he collapsed from heat.",
+]
+
+function LoadingOverlay() {
+  const [fact, setFact] = useState('')
+  const [fade, setFade] = useState(true)
+  const idxRef = useRef(Math.floor(Math.random() * FUN_FACTS.length))
+
+  useEffect(() => {
+    setFact(FUN_FACTS[idxRef.current])
+    const interval = setInterval(() => {
+      setFade(false)
+      setTimeout(() => {
+        idxRef.current = (idxRef.current + 1) % FUN_FACTS.length
+        setFact(FUN_FACTS[idxRef.current])
+        setFade(true)
+      }, 400)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <div className="map-overlay">
+      <div className="map-loading-content">
+        <div className="map-loading-cannon">⚔️</div>
+        <div className="spinner map-spinner" />
+        <p className={`map-loading-fact${fade ? ' fact-visible' : ''}`}>{fact}</p>
+      </div>
+    </div>
+  )
+}
 
 const SIDE_COLORS: Record<Side, string> = {
   american: '#3b82f6',
@@ -89,9 +141,7 @@ export default function MapView({ battle, loading, mainBattle, compareBattle, ac
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-      {loading && (
-        <div className="map-overlay"><div className="spinner map-spinner" /></div>
-      )}
+      {loading && <LoadingOverlay />}
 
       {/* Tile toggle */}
       <div className="tile-controls">

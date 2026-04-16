@@ -1,11 +1,9 @@
 import { BattleData } from './types'
 
 const CACHE_KEY = 'mapmaker-battle-cache'
-const TTL_MS = 24 * 60 * 60 * 1000 // 24 hours — battles don't change
 
 interface CacheEntry {
   data: BattleData
-  cachedAt: number
 }
 
 type BattleCache = Record<string, CacheEntry>
@@ -36,20 +34,13 @@ function writeCache(cache: BattleCache): void {
 
 export function getCached(query: string): BattleData | null {
   const cache = readCache()
-  const key = normalizeKey(query)
-  const entry = cache[key]
-  if (!entry) return null
-  if (Date.now() - entry.cachedAt > TTL_MS) {
-    delete cache[key]
-    writeCache(cache)
-    return null
-  }
-  return entry.data
+  const entry = cache[normalizeKey(query)]
+  return entry ? entry.data : null
 }
 
 export function setCached(query: string, data: BattleData): void {
   const cache = readCache()
-  cache[normalizeKey(query)] = { data, cachedAt: Date.now() }
+  cache[normalizeKey(query)] = { data }
   writeCache(cache)
 }
 

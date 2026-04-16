@@ -45,6 +45,18 @@ export default function App() {
     onCampaignNext: () => activeCampaign && handleCampaignNav('next'),
   })
 
+  // ── Preload bundled battles into cache on first mount
+  useEffect(() => {
+    fetch('/preloaded-battles.json')
+      .then(r => r.ok ? r.json() : {})
+      .then((map: Record<string, BattleData>) => {
+        for (const [key, data] of Object.entries(map)) {
+          if (!getCached(key)) setCached(key, data)
+        }
+      })
+      .catch(() => {})
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
   // ── URL sync
   useEffect(() => {
     if (!battle) return

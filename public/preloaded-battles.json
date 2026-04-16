@@ -1,0 +1,2767 @@
+{
+  "battle of lexington and concord": {
+    "name": "Battle of Lexington and Concord",
+    "date": "April 19, 1775",
+    "location": "Lexington and Concord, Massachusetts",
+    "center": [42.4473, -71.2290],
+    "zoom": 12,
+    "description": "The first military engagements of the American Revolutionary War.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Initiated the American Revolutionary War.",
+    "commanders": {
+      "american": ["John Parker", "James Barrett"],
+      "british": ["Francis Smith", "John Pitcairn"]
+    },
+    "casualties": {
+      "american": "49 killed, 39 wounded",
+      "british": "73 killed, 174 wounded, 26 missing"
+    },
+    "markers": [
+      {
+        "id": "lexington-green",
+        "lat": 42.4491,
+        "lng": -71.2305,
+        "label": "Lexington Green",
+        "description": "Site of the first shots fired.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "old-north-bridge",
+        "lat": 42.4705,
+        "lng": -71.3501,
+        "label": "Old North Bridge",
+        "description": "Where the 'shot heard 'round the world' took place.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-retreat",
+        "points": [
+          [42.4705, -71.3501],
+          [42.4491, -71.2305],
+          [42.4072, -71.1190]
+        ],
+        "label": "British Retreat",
+        "description": "British withdrawal back to Boston under heavy fire.",
+        "side": "british",
+        "type": "retreat"
+      }
+    ],
+    "zones": [
+      {
+        "id": "battle-area",
+        "points": [
+          [42.48, -71.37],
+          [42.48, -71.10],
+          [42.39, -71.10],
+          [42.39, -71.37]
+        ],
+        "label": "Conflict Zone",
+        "description": "Area of running skirmishes between Concord and Boston.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of bunker hill": {
+    "name": "Battle of Bunker Hill",
+    "date": "June 17, 1775",
+    "location": "Charlestown, Massachusetts",
+    "center": [42.3764, -71.0608],
+    "zoom": 13,
+    "description": "British victory at high cost during the Siege of Boston.",
+    "outcome": "british_victory",
+    "outcomeLabel": "Pyrrhic British Victory",
+    "significance": "Demonstrated American capability to withstand British attacks.",
+    "commanders": {
+      "american": ["William Prescott", "Israel Putnam"],
+      "british": ["William Howe", "Robert Pigot"]
+    },
+    "casualties": {
+      "american": "115 killed, 305 wounded",
+      "british": "226 killed, 828 wounded"
+    },
+    "markers": [
+      {
+        "id": "prescott-position",
+        "lat": 42.3763,
+        "lng": -71.0608,
+        "label": "Breed's Hill Redoubt",
+        "description": "The main defensive fortification built by Americans.",
+        "side": "american",
+        "type": "fortification"
+      },
+      {
+        "id": "howe-landing",
+        "lat": 42.3740,
+        "lng": -71.0530,
+        "label": "Moulton's Point",
+        "description": "British landing site.",
+        "side": "british",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-assault",
+        "points": [
+          [42.3740, -71.0530],
+          [42.3755, -71.0580],
+          [42.3763, -71.0608]
+        ],
+        "label": "British Assault",
+        "description": "Third and successful frontal assault on Breed's Hill.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "redoubt-zone",
+        "points": [
+          [42.3768, -71.0615],
+          [42.3768, -71.0600],
+          [42.3758, -71.0600],
+          [42.3758, -71.0615]
+        ],
+        "label": "The Redoubt",
+        "description": "Fortified American position.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of long island": {
+    "name": "Battle of Long Island",
+    "date": "August 27, 1776",
+    "location": "Brooklyn, New York",
+    "center": [40.666, -73.972],
+    "zoom": 11,
+    "description": "First major battle after the Declaration of Independence.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Gave British control of New York City.",
+    "commanders": {
+      "american": ["George Washington", "Israel Putnam"],
+      "british": ["William Howe", "Henry Clinton"]
+    },
+    "casualties": {
+      "american": "300 killed, 800 wounded, 1,000 captured",
+      "british": "64 killed, 293 wounded"
+    },
+    "markers": [
+      {
+        "id": "old-stone-house",
+        "lat": 40.6728,
+        "lng": -73.9845,
+        "label": "Old Stone House",
+        "description": "Site of the Maryland 400's stand.",
+        "side": "american",
+        "type": "event"
+      },
+      {
+        "id": "howe-hq",
+        "lat": 40.6800,
+        "lng": -73.9400,
+        "label": "British Flanking Position",
+        "description": "Clinton's route through Jamaica Pass.",
+        "side": "british",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "jamaica-pass-flank",
+        "points": [
+          [40.686, -73.830],
+          [40.690, -73.900],
+          [40.675, -73.950]
+        ],
+        "label": "British Flank",
+        "description": "Night march through Jamaica Pass to outflank Americans.",
+        "side": "british",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "brooklyn-heights",
+        "points": [
+          [40.700, -73.999],
+          [40.690, -73.990],
+          [40.685, -74.005]
+        ],
+        "label": "Brooklyn Heights Defenses",
+        "description": "Washington's fortified lines.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of harlem heights": {
+    "name": "Battle of Harlem Heights",
+    "date": "September 16, 1776",
+    "location": "Manhattan, New York",
+    "center": [40.814, -73.955],
+    "zoom": 13,
+    "description": "Small tactical success boosting American morale.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Washington's first battlefield victory of the war.",
+    "commanders": {
+      "american": ["George Washington"],
+      "british": ["Alexander Leslie"]
+    },
+    "casualties": {
+      "american": "30 killed, 100 wounded",
+      "british": "90 killed, 300 wounded"
+    },
+    "markers": [
+      {
+        "id": "hollow-way",
+        "lat": 40.817,
+        "lng": -73.958,
+        "label": "The Hollow Way",
+        "description": "Initial engagement point near present-day 125th St.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "buckwheat-field",
+        "lat": 40.808,
+        "lng": -73.962,
+        "label": "Buckwheat Field",
+        "description": "Location of the heaviest fighting.",
+        "side": "american",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "american-counterattack",
+        "points": [
+          [40.820, -73.950],
+          [40.815, -73.955],
+          [40.810, -73.960]
+        ],
+        "label": "American Advance",
+        "description": "Rangers driving British light infantry south.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "american-lines",
+        "points": [
+          [40.825, -73.945],
+          [40.822, -73.955],
+          [40.830, -73.940]
+        ],
+        "label": "Harlem Heights",
+        "description": "Defensive positions on high ground.",
+        "type": "territory",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of white plains": {
+    "name": "Battle of White Plains",
+    "date": "October 28, 1776",
+    "location": "White Plains, New York",
+    "center": [41.040, -73.780],
+    "zoom": 12,
+    "description": "British victory pushing Washington out of the area.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Washington withdrew to North Castle, avoiding encirclement.",
+    "commanders": {
+      "american": ["George Washington"],
+      "british": ["William Howe"]
+    },
+    "casualties": {
+      "american": "175 killed/wounded",
+      "british": "230 killed/wounded"
+    },
+    "markers": [
+      {
+        "id": "chatterton-hill",
+        "lat": 41.033,
+        "lng": -73.786,
+        "label": "Chatterton Hill",
+        "description": "Crucial hill captured by British/Hessian forces.",
+        "side": "british",
+        "type": "position"
+      },
+      {
+        "id": "purdy-house",
+        "lat": 41.048,
+        "lng": -73.765,
+        "label": "Washington HQ",
+        "description": "Purdy House, used as American headquarters.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "hessian-charge",
+        "points": [
+          [41.030, -73.775],
+          [41.033, -73.786]
+        ],
+        "label": "Hessian Assault",
+        "description": "Charge up Chatterton Hill.",
+        "side": "hessian",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "american-encampment",
+        "points": [
+          [41.050, -73.790],
+          [41.055, -73.770],
+          [41.040, -73.760]
+        ],
+        "label": "American Camp",
+        "description": "Defensive perimeter in White Plains.",
+        "type": "encampment",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of fort washington": {
+    "name": "Battle of Fort Washington",
+    "date": "November 16, 1776",
+    "location": "Manhattan, New York",
+    "center": [40.852, -73.938],
+    "zoom": 13,
+    "description": "Disastrous American loss and surrender of the garrison.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Removed the last American presence from Manhattan.",
+    "commanders": {
+      "american": ["Robert Magaw"],
+      "british": ["William Howe", "Wilhelm von Knyphausen"]
+    },
+    "casualties": {
+      "american": "53 killed, 2,800 captured",
+      "british": "84 killed, 374 wounded"
+    },
+    "markers": [
+      {
+        "id": "fort-site",
+        "lat": 40.853,
+        "lng": -73.937,
+        "label": "Fort Washington",
+        "description": "Main redoubt (modern Bennett Park).",
+        "side": "american",
+        "type": "fortification"
+      },
+      {
+        "id": "knyphausen-entry",
+        "lat": 40.865,
+        "lng": -73.930,
+        "label": "Hessian Attack",
+        "description": "Knyphausen's column attacking from the north.",
+        "side": "hessian",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-landing",
+        "points": [
+          [40.840, -73.930],
+          [40.845, -73.935]
+        ],
+        "label": "Matthews Landing",
+        "description": "British assault from the East River.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "fort-bounds",
+        "points": [
+          [40.855, -73.940],
+          [40.855, -73.935],
+          [40.850, -73.935],
+          [40.850, -73.940]
+        ],
+        "label": "Fort Perimeter",
+        "description": "Central fortification area.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of trenton": {
+    "name": "Battle of Trenton",
+    "date": "December 26, 1776",
+    "location": "Trenton, New Jersey",
+    "center": [40.220, -74.760],
+    "zoom": 13,
+    "description": "Washington's daring crossing of the Delaware River.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Revitalized American morale and enlistments.",
+    "commanders": {
+      "american": ["George Washington"],
+      "hessian": ["Johann Rall"]
+    },
+    "casualties": {
+      "american": "2 dead (cold), 5 wounded",
+      "hessian": "22 killed, 896 captured"
+    },
+    "markers": [
+      {
+        "id": "crossing-point",
+        "lat": 40.298,
+        "lng": -74.872,
+        "label": "Washington Crossing",
+        "description": "Point where troops crossed the Delaware.",
+        "side": "american",
+        "type": "event"
+      },
+      {
+        "id": "rall-hq",
+        "lat": 40.221,
+        "lng": -74.764,
+        "label": "Rall HQ",
+        "description": "Hessian headquarters in Trenton.",
+        "side": "hessian",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "pincer-attack",
+        "points": [
+          [40.240, -74.770],
+          [40.225, -74.765]
+        ],
+        "label": "Sullivan's Column",
+        "description": "Advance along the river road.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "trenton-village",
+        "points": [
+          [40.225, -74.770],
+          [40.225, -74.755],
+          [40.215, -74.755],
+          [40.215, -74.770]
+        ],
+        "label": "Hessian Garrison",
+        "description": "Area occupied by Hessian troops.",
+        "type": "encampment",
+        "side": "hessian"
+      }
+    ]
+  },
+  "battle of princeton": {
+    "name": "Battle of Princeton",
+    "date": "January 3, 1777",
+    "location": "Princeton, New Jersey",
+    "center": [40.330, -74.670],
+    "zoom": 13,
+    "description": "Surprise attack on British reinforcements.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Forced British retreat to New Brunswick.",
+    "commanders": {
+      "american": ["George Washington", "Hugh Mercer"],
+      "british": ["Charles Mawhood"]
+    },
+    "casualties": {
+      "american": "40 killed/wounded",
+      "british": "270 killed/wounded/captured"
+    },
+    "markers": [
+      {
+        "id": "mercer-oaks",
+        "lat": 40.329,
+        "lng": -74.674,
+        "label": "Mercer Oak",
+        "description": "Site where Hugh Mercer was mortally wounded.",
+        "side": "american",
+        "type": "commander"
+      },
+      {
+        "id": "nassau-hall",
+        "lat": 40.347,
+        "lng": -74.660,
+        "label": "Nassau Hall",
+        "description": "Last British holdout in the town.",
+        "side": "british",
+        "type": "fortification"
+      }
+    ],
+    "movements": [
+      {
+        "id": "washington-charge",
+        "points": [
+          [40.325, -74.678],
+          [40.330, -74.672],
+          [40.335, -74.665]
+        ],
+        "label": "Washington's Rally",
+        "description": "Washington personally leads a charge against the British line.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "clark-farm",
+        "points": [
+          [40.332, -74.676],
+          [40.328, -74.670],
+          [40.325, -74.676]
+        ],
+        "label": "Battlefield Core",
+        "description": "William Clark's farm where the main clash occurred.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of brandywine": {
+    "name": "Battle of Brandywine",
+    "date": "September 11, 1777",
+    "location": "Chadds Ford, Pennsylvania",
+    "center": [39.870, -75.590],
+    "zoom": 11,
+    "description": "Largest single-day engagement of the American Revolution.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Led to the British capture of Philadelphia.",
+    "commanders": {
+      "american": ["George Washington"],
+      "british": ["William Howe"]
+    },
+    "casualties": {
+      "american": "1,300 killed/wounded/captured",
+      "british": "587 killed/wounded"
+    },
+    "markers": [
+      {
+        "id": "chadds-ford",
+        "lat": 39.872,
+        "lng": -75.592,
+        "label": "Chadds Ford",
+        "description": "Washington's initial defensive line.",
+        "side": "american",
+        "type": "position"
+      },
+      {
+        "id": "birmingham-meeting",
+        "lat": 39.904,
+        "lng": -75.580,
+        "label": "Birmingham Meeting House",
+        "description": "Center of the fighting during the British flank.",
+        "side": "neutral",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "cornwallis-flank",
+        "points": [
+          [39.850, -75.650],
+          [39.920, -75.640],
+          [39.910, -75.585]
+        ],
+        "label": "Cornwallis Flank",
+        "description": "Long march to cross Brandywine Creek upstream.",
+        "side": "british",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "american-main-line",
+        "points": [
+          [39.875, -75.600],
+          [39.885, -75.580],
+          [39.865, -75.580]
+        ],
+        "label": "Continental Defense",
+        "description": "Defensive positions along the creek heights.",
+        "type": "battlefield",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of paoli": {
+    "name": "Battle of Paoli",
+    "date": "September 20, 1777",
+    "location": "Malvern, Pennsylvania",
+    "center": [40.035, -75.515],
+    "zoom": 13,
+    "description": "The 'Paoli Massacre' nighttime bayonet attack.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Devastated Wayne's division via surprise attack.",
+    "commanders": {
+      "american": ["Anthony Wayne"],
+      "british": ["Charles Grey"]
+    },
+    "casualties": {
+      "american": "52 killed, 100+ wounded",
+      "british": "4 killed, 7 wounded"
+    },
+    "markers": [
+      {
+        "id": "american-camp",
+        "lat": 40.035,
+        "lng": -75.517,
+        "label": "Wayne's Camp",
+        "description": "Where the Americans were surprised at night.",
+        "side": "american",
+        "type": "encampment"
+      },
+      {
+        "id": "grey-start",
+        "lat": 40.040,
+        "lng": -75.495,
+        "label": "Grey's Advance",
+        "description": "Point where British removed flints from muskets.",
+        "side": "british",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "bayonet-charge",
+        "points": [
+          [40.040, -75.500],
+          [40.036, -75.515]
+        ],
+        "label": "No-Flint Grey Charge",
+        "description": "Nighttime bayonet-only assault.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "massacre-site",
+        "points": [
+          [40.037, -75.520],
+          [40.037, -75.510],
+          [40.033, -75.510],
+          [40.033, -75.520]
+        ],
+        "label": "Camp Perimeter",
+        "description": "Area of the skirmish and retreat.",
+        "type": "battlefield",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of germantown": {
+    "name": "Battle of Germantown",
+    "date": "October 4, 1777",
+    "location": "Philadelphia, Pennsylvania",
+    "center": [40.040, -75.190],
+    "zoom": 12,
+    "description": "Failed American attack to retake Philadelphia.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Impressed France with American aggressiveness despite defeat.",
+    "commanders": {
+      "american": ["George Washington"],
+      "british": ["William Howe"]
+    },
+    "casualties": {
+      "american": "152 killed, 521 wounded, 400 captured",
+      "british": "71 killed, 448 wounded"
+    },
+    "markers": [
+      {
+        "id": "cliveden",
+        "lat": 40.0435,
+        "lng": -75.1895,
+        "label": "Cliveden (Chew House)",
+        "description": "British holdout house that delayed American advance.",
+        "side": "british",
+        "type": "fortification"
+      },
+      {
+        "id": "market-square",
+        "lat": 40.035,
+        "lng": -75.178,
+        "label": "Germantown Center",
+        "description": "Main British position.",
+        "side": "british",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "american-advance",
+        "points": [
+          [40.070, -75.220],
+          [40.050, -75.200],
+          [40.043, -75.190]
+        ],
+        "label": "Sullivan's Column",
+        "description": "Continental advance in heavy fog.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "chew-house-grounds",
+        "points": [
+          [40.045, -75.192],
+          [40.045, -75.187],
+          [40.042, -75.187],
+          [40.042, -75.192]
+        ],
+        "label": "Cliveden Estate",
+        "description": "Heavy fighting around the stone mansion.",
+        "type": "territory",
+        "side": "british"
+      }
+    ]
+  },
+  "battle of saratoga": {
+    "name": "Battle of Saratoga",
+    "date": "Sept 19 – Oct 17, 1777",
+    "location": "Stillwater, New York",
+    "center": [42.998, -73.636],
+    "zoom": 11,
+    "description": "Turning point of the Revolutionary War.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Secured the French Alliance.",
+    "commanders": {
+      "american": ["Horatio Gates", "Benedict Arnold"],
+      "british": ["John Burgoyne"]
+    },
+    "casualties": {
+      "american": "330 killed/wounded",
+      "british": "1,100 killed/wounded, 5,900 captured"
+    },
+    "markers": [
+      {
+        "id": "freemans-farm",
+        "lat": 42.993,
+        "lng": -73.655,
+        "label": "Freeman's Farm",
+        "description": "Site of the first battle (Sept 19).",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "breymann-redoubt",
+        "lat": 43.003,
+        "lng": -73.665,
+        "label": "Breymann Redoubt",
+        "description": "Arnold led a charge here on Oct 7.",
+        "side": "british",
+        "type": "fortification"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-march-south",
+        "points": [
+          [43.100, -73.580],
+          [43.050, -73.620],
+          [43.000, -73.640]
+        ],
+        "label": "Burgoyne's Advance",
+        "description": "British push towards Albany.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "bemus-heights",
+        "points": [
+          [42.980, -73.650],
+          [42.990, -73.630],
+          [42.975, -73.625]
+        ],
+        "label": "Bemis Heights",
+        "description": "Fortified American hilltop positions.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of monmouth": {
+    "name": "Battle of Monmouth",
+    "date": "June 28, 1778",
+    "location": "Freehold, New Jersey",
+    "center": [40.260, -74.320],
+    "zoom": 12,
+    "description": "Major battle resulting in a tactical draw.",
+    "outcome": "inconclusive",
+    "outcomeLabel": "Inconclusive (Tactical Draw)",
+    "significance": "Proved the effectiveness of Steuben's training.",
+    "commanders": {
+      "american": ["George Washington", "Charles Lee"],
+      "british": ["Henry Clinton", "Charles Cornwallis"]
+    },
+    "casualties": {
+      "american": "370 killed/wounded/heatstroke",
+      "british": "360 killed/wounded/heatstroke"
+    },
+    "markers": [
+      {
+        "id": "monmouth-court-house",
+        "lat": 40.259,
+        "lng": -74.275,
+        "label": "Court House",
+        "description": "Village where British rear guard was located.",
+        "side": "british",
+        "type": "landmark"
+      },
+      {
+        "id": "hedgerow",
+        "lat": 40.262,
+        "lng": -74.328,
+        "label": "The Hedgerow",
+        "description": "Site of intense combat during the afternoon.",
+        "side": "american",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "lee-retreat",
+        "points": [
+          [40.260, -74.280],
+          [40.265, -74.310],
+          [40.262, -74.330]
+        ],
+        "label": "Lee's Retreat",
+        "description": "Disorganized American withdrawal before Washington arrived.",
+        "side": "american",
+        "type": "retreat"
+      }
+    ],
+    "zones": [
+      {
+        "id": "battlefield-area",
+        "points": [
+          [40.275, -74.340],
+          [40.275, -74.270],
+          [40.245, -74.270],
+          [40.245, -74.340]
+        ],
+        "label": "Monmouth Battlefield",
+        "description": "Plains and swamps where the battle occurred.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of cowpens": {
+    "name": "Battle of Cowpens",
+    "date": "January 17, 1781",
+    "location": "Gaffney, South Carolina",
+    "center": [35.130, -81.810],
+    "zoom": 13,
+    "description": "Tactical masterpiece using a double envelopment.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Turning point in the Southern theater.",
+    "commanders": {
+      "american": ["Daniel Morgan"],
+      "british": ["Banastre Tarleton"]
+    },
+    "casualties": {
+      "american": "25 killed, 124 wounded",
+      "british": "110 killed, 200 wounded, 500 captured"
+    },
+    "markers": [
+      {
+        "id": "sharpshooters",
+        "lat": 35.132,
+        "lng": -81.808,
+        "label": "Skirmish Line",
+        "description": "First line of American marksmen.",
+        "side": "american",
+        "type": "position"
+      },
+      {
+        "id": "tarleton-charge",
+        "lat": 35.128,
+        "lng": -81.812,
+        "label": "British Attack",
+        "description": "Tarleton's cavalry and infantry charge.",
+        "side": "british",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "militia-withdrawal",
+        "points": [
+          [35.132, -81.808],
+          [35.135, -81.812]
+        ],
+        "label": "Planned Retreat",
+        "description": "Militia fire two volleys then fall back.",
+        "side": "american",
+        "type": "retreat"
+      }
+    ],
+    "zones": [
+      {
+        "id": "cowpens-meadow",
+        "points": [
+          [35.135, -81.815],
+          [35.135, -81.805],
+          [35.125, -81.805],
+          [35.125, -81.815]
+        ],
+        "label": "Hannah's Cowpens",
+        "description": "Pasture land used for the battle.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of guilford court house": {
+    "name": "Battle of Guilford Court House",
+    "date": "March 15, 1781",
+    "location": "Greensboro, North Carolina",
+    "center": [36.132, -79.847],
+    "zoom": 12,
+    "description": "British tactical victory with devastating losses.",
+    "outcome": "british_victory",
+    "outcomeLabel": "Pyrrhic British Victory",
+    "significance": "Forced Cornwallis to abandon the Carolinas for Virginia.",
+    "commanders": {
+      "american": ["Nathanael Greene"],
+      "british": ["Charles Cornwallis"]
+    },
+    "casualties": {
+      "american": "79 killed, 185 wounded",
+      "british": "93 killed, 413 wounded"
+    },
+    "markers": [
+      {
+        "id": "first-line",
+        "lat": 36.130,
+        "lng": -79.855,
+        "label": "First American Line",
+        "description": "North Carolina militia behind a rail fence.",
+        "side": "american",
+        "type": "position"
+      },
+      {
+        "id": "court-house",
+        "lat": 36.134,
+        "lng": -79.844,
+        "label": "Guilford Court House",
+        "description": "Site of the third and final line.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-advance",
+        "points": [
+          [36.125, -79.860],
+          [36.130, -79.855],
+          [36.132, -79.847]
+        ],
+        "label": "Cornwallis Assault",
+        "description": "British troops pushing through three defensive lines.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "battlefield-park",
+        "points": [
+          [36.140, -79.865],
+          [36.140, -79.835],
+          [36.125, -79.835],
+          [36.125, -79.865]
+        ],
+        "label": "Battlefield Area",
+        "description": "Wooded terrain and clearings.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "siege of yorktown": {
+    "name": "Siege of Yorktown",
+    "date": "Sept 28 – Oct 19, 1781",
+    "location": "Yorktown, Virginia",
+    "center": [37.236, -76.510],
+    "zoom": 12,
+    "description": "The final major land battle of the American Revolution.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Franco-American Victory",
+    "significance": "Led directly to the end of the war.",
+    "commanders": {
+      "american": ["George Washington"],
+      "british": ["Charles Cornwallis"],
+      "french": ["Jean-Baptiste de Rochambeau", "Comte de Grasse"]
+    },
+    "casualties": {
+      "american": "28 killed, 107 wounded",
+      "british": "156 killed, 326 wounded, 7,000+ captured",
+      "french": "60 killed, 194 wounded"
+    },
+    "markers": [
+      {
+        "id": "redoubt-9",
+        "lat": 37.230,
+        "lng": -76.498,
+        "label": "Redoubt 9",
+        "description": "Captured by French troops.",
+        "side": "french",
+        "type": "fortification"
+      },
+      {
+        "id": "redoubt-10",
+        "lat": 37.231,
+        "lng": -76.495,
+        "label": "Redoubt 10",
+        "description": "Captured by Alexander Hamilton's light infantry.",
+        "side": "american",
+        "type": "fortification"
+      }
+    ],
+    "movements": [
+      {
+        "id": "french-fleet",
+        "points": [
+          [37.100, -76.100],
+          [37.150, -76.300],
+          [37.200, -76.450]
+        ],
+        "label": "French Naval Blockade",
+        "description": "De Grasse blockading the Chesapeake Bay.",
+        "side": "french",
+        "type": "naval"
+      }
+    ],
+    "zones": [
+      {
+        "id": "british-inner-lines",
+        "points": [
+          [37.238, -76.515],
+          [37.240, -76.505],
+          [37.235, -76.500],
+          [37.232, -76.512]
+        ],
+        "label": "Yorktown Defenses",
+        "description": "Cornwallis's fortified perimeter.",
+        "type": "fortification",
+        "side": "british"
+      }
+    ]
+  },
+  "battle of queenston heights": {
+    "name": "Battle of Queenston Heights",
+    "date": "October 13, 1812",
+    "location": "Queenston, Ontario",
+    "center": [43.160, -79.053],
+    "zoom": 13,
+    "description": "First major battle of the War of 1812.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "American failure to establish a foothold in Canada.",
+    "commanders": {
+      "american": ["Stephen Van Rensselaer"],
+      "british": ["Isaac Brock", "Roger Sheaffe"]
+    },
+    "casualties": {
+      "american": "100 killed, 900 captured",
+      "british": "21 killed, 85 wounded"
+    },
+    "markers": [
+      {
+        "id": "brock-monument",
+        "lat": 43.159,
+        "lng": -79.054,
+        "label": "Brock's Monument",
+        "description": "Site where General Brock was killed.",
+        "side": "british",
+        "type": "commander"
+      },
+      {
+        "id": "vroman-point",
+        "lat": 43.170,
+        "lng": -79.045,
+        "label": "Vroman's Point",
+        "description": "American artillery position.",
+        "side": "american",
+        "type": "artillery"
+      }
+    ],
+    "movements": [
+      {
+        "id": "american-crossing",
+        "points": [
+          [43.165, -79.045],
+          [43.162, -79.051]
+        ],
+        "label": "River Crossing",
+        "description": "American troops crossing the Niagara River.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "the-heights",
+        "points": [
+          [43.162, -79.058],
+          [43.158, -79.058],
+          [43.158, -79.052],
+          [43.162, -79.052]
+        ],
+        "label": "Queenston Heights",
+        "description": "Tactical high ground overlooking the river.",
+        "type": "battlefield",
+        "side": "british"
+      }
+    ]
+  },
+  "battle of lake erie": {
+    "name": "Battle of Lake Erie",
+    "date": "September 10, 1813",
+    "location": "Put-in-Bay, Lake Erie",
+    "center": [41.765, -82.727],
+    "zoom": 9,
+    "description": "Major naval victory securing the lake for the US.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Secured US control of Lake Erie.",
+    "commanders": {
+      "american": ["Oliver Hazard Perry"],
+      "british": ["Robert Heriot Barclay"]
+    },
+    "casualties": {
+      "american": "27 killed, 96 wounded",
+      "british": "41 killed, 94 wounded, 306 captured"
+    },
+    "markers": [
+      {
+        "id": "lawrence-flagship",
+        "lat": 41.780,
+        "lng": -82.750,
+        "label": "USS Lawrence",
+        "description": "Perry's original flagship, heavily damaged.",
+        "side": "american",
+        "type": "event"
+      },
+      {
+        "id": "niagara-flagship",
+        "lat": 41.770,
+        "lng": -82.700,
+        "label": "USS Niagara",
+        "description": "Ship Perry transferred to during the battle.",
+        "side": "american",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "perry-transfer",
+        "points": [
+          [41.780, -82.750],
+          [41.775, -82.725],
+          [41.770, -82.700]
+        ],
+        "label": "The Boat Transfer",
+        "description": "Perry rowed between ships under fire.",
+        "side": "american",
+        "type": "naval"
+      }
+    ],
+    "zones": [
+      {
+        "id": "engagement-area",
+        "points": [
+          [41.850, -82.850],
+          [41.850, -82.600],
+          [41.680, -82.600],
+          [41.680, -82.850]
+        ],
+        "label": "Lake Erie Battle Zone",
+        "description": "Naval maneuver area near Put-in-Bay.",
+        "type": "territory",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of the thames": {
+    "name": "Battle of the Thames",
+    "date": "October 5, 1813",
+    "location": "Chatham-Kent, Ontario",
+    "center": [42.544, -81.986],
+    "zoom": 12,
+    "description": "Decisive American victory against British and Native allies.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Death of Tecumseh and collapse of Indian Confederacy.",
+    "commanders": {
+      "american": ["William Henry Harrison"],
+      "british": ["Henry Procter"],
+      "other": ["Tecumseh"]
+    },
+    "casualties": {
+      "american": "15 killed, 30 wounded",
+      "british": "12 killed, 22 wounded, 600 captured",
+      "other": "33 killed (Indian)"
+    },
+    "markers": [
+      {
+        "id": "tecumseh-death",
+        "lat": 42.545,
+        "lng": -81.980,
+        "label": "Tecumseh's Fall",
+        "description": "Approximate location where Tecumseh was killed.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "johnson-charge",
+        "lat": 42.542,
+        "lng": -81.992,
+        "label": "Johnson's Cavalry",
+        "description": "Col. Richard M. Johnson's mounted charge.",
+        "side": "american",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "kentucky-charge",
+        "points": [
+          [42.540, -82.000],
+          [42.544, -81.986]
+        ],
+        "label": "Cavalry Charge",
+        "description": "Mounted Kentucky riflemen charging British lines.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "british-lines",
+        "points": [
+          [42.548, -81.985],
+          [42.540, -81.985],
+          [42.545, -81.975]
+        ],
+        "label": "British/Indian Positions",
+        "description": "Defensive line across a road near a swamp.",
+        "type": "battlefield",
+        "side": "british"
+      }
+    ]
+  },
+  "battle of horseshoe bend": {
+    "name": "Battle of Horseshoe Bend",
+    "date": "March 27, 1814",
+    "location": "Daviston, Alabama",
+    "center": [32.973, -85.736],
+    "zoom": 13,
+    "description": "Decisive defeat of the Red Stick Creek Indians.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Ended the Creek War and opened Alabama for settlement.",
+    "commanders": {
+      "american": ["Andrew Jackson"],
+      "other": ["Menawa"]
+    },
+    "casualties": {
+      "american": "49 killed, 154 wounded",
+      "other": "800+ killed"
+    },
+    "markers": [
+      {
+        "id": "the-breastwork",
+        "lat": 32.975,
+        "lng": -85.736,
+        "label": "Creek Breastwork",
+        "description": "Sturdy log wall built across the peninsula.",
+        "side": "neutral",
+        "type": "fortification"
+      },
+      {
+        "id": "jackson-cannon",
+        "lat": 32.978,
+        "lng": -85.734,
+        "label": "Jackson's Battery",
+        "description": "Artillery used to batter the breastworks.",
+        "side": "american",
+        "type": "artillery"
+      }
+    ],
+    "movements": [
+      {
+        "id": "cherokee-crossing",
+        "points": [
+          [32.968, -85.735],
+          [32.970, -85.737],
+          [32.972, -85.736]
+        ],
+        "label": "Rear Assault",
+        "description": "Cherokee allies swimming the river to attack from behind.",
+        "side": "american",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "horseshoe-bend",
+        "points": [
+          [32.975, -85.738],
+          [32.970, -85.742],
+          [32.965, -85.736],
+          [32.970, -85.730],
+          [32.975, -85.734]
+        ],
+        "label": "The Peninsula",
+        "description": "Creek camp inside the river bend.",
+        "type": "territory",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of bladensburg": {
+    "name": "Battle of Bladensburg",
+    "date": "August 24, 1814",
+    "location": "Bladensburg, Maryland",
+    "center": [38.938, -76.931],
+    "zoom": 13,
+    "description": "American defeat leading to the capture of Washington.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Victory",
+    "significance": "Known as the 'Bladensburg Races' due to American retreat.",
+    "commanders": {
+      "american": ["William Winder"],
+      "british": ["Robert Ross"]
+    },
+    "casualties": {
+      "american": "10-20 killed, 40 wounded, 100 captured",
+      "british": "64 killed, 185 wounded"
+    },
+    "markers": [
+      {
+        "id": "bladensburg-bridge",
+        "lat": 38.940,
+        "lng": -76.936,
+        "label": "The Bridge",
+        "description": "Point where British crossed the Anacostia River.",
+        "side": "british",
+        "type": "event"
+      },
+      {
+        "id": "barney-battery",
+        "lat": 38.932,
+        "lng": -76.940,
+        "label": "Barney's Flotilla Men",
+        "description": "Last stand by Commodore Barney's sailors.",
+        "side": "american",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "american-flight",
+        "points": [
+          [38.938, -76.945],
+          [38.920, -77.000]
+        ],
+        "label": "The 'Races'",
+        "description": "Disorderly retreat towards the capital.",
+        "side": "american",
+        "type": "retreat"
+      }
+    ],
+    "zones": [
+      {
+        "id": "american-defense-lines",
+        "points": [
+          [38.945, -76.930],
+          [38.935, -76.930],
+          [38.935, -76.950],
+          [38.945, -76.950]
+        ],
+        "label": "Defense Perimeters",
+        "description": "Three successive lines of American militia.",
+        "type": "battlefield",
+        "side": "american"
+      }
+    ]
+  },
+  "burning of washington": {
+    "name": "Burning of Washington",
+    "date": "August 24–25, 1814",
+    "location": "Washington, D.C.",
+    "center": [38.890, -77.010],
+    "zoom": 12,
+    "description": "British occupation and burning of public buildings.",
+    "outcome": "british_victory",
+    "outcomeLabel": "British Success",
+    "significance": "Only time since the Revolution the US capital was occupied.",
+    "commanders": {
+      "american": ["James Madison"],
+      "british": ["Robert Ross", "George Cockburn"]
+    },
+    "casualties": {
+      "american": "Minimal combat casualties",
+      "british": "Minimal combat casualties"
+    },
+    "markers": [
+      {
+        "id": "white-house-burn",
+        "lat": 38.897,
+        "lng": -77.036,
+        "label": "White House",
+        "description": "Burned by British forces on Aug 24.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "capitol-burn",
+        "lat": 38.889,
+        "lng": -77.009,
+        "label": "The Capitol",
+        "description": "Burned by British forces.",
+        "side": "neutral",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-entry",
+        "points": [
+          [38.910, -76.950],
+          [38.895, -77.000],
+          [38.897, -77.036]
+        ],
+        "label": "British Occupation",
+        "description": "Route of British troops entering the city.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "federal-city",
+        "points": [
+          [38.910, -77.060],
+          [38.910, -76.980],
+          [38.870, -76.980],
+          [38.870, -77.060]
+        ],
+        "label": "Washington City",
+        "description": "The administrative center of the US.",
+        "type": "territory",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of baltimore": {
+    "name": "Battle of Baltimore",
+    "date": "September 12–15, 1814",
+    "location": "Baltimore, Maryland",
+    "center": [39.260, -76.580],
+    "zoom": 11,
+    "description": "Combined land and sea battle; defense of Fort McHenry.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Inspired 'The Star-Spangled Banner'.",
+    "commanders": {
+      "american": ["Samuel Smith", "George Armistead"],
+      "british": ["Robert Ross", "Alexander Cochrane"]
+    },
+    "casualties": {
+      "american": "24 killed, 139 wounded",
+      "british": "46 killed, 300 wounded"
+    },
+    "markers": [
+      {
+        "id": "fort-mchenry",
+        "lat": 39.263,
+        "lng": -76.580,
+        "label": "Fort McHenry",
+        "description": "Withstood 25-hour naval bombardment.",
+        "side": "american",
+        "type": "fortification"
+      },
+      {
+        "id": "north-point",
+        "lat": 39.215,
+        "lng": -76.475,
+        "label": "North Point",
+        "description": "Land battle where Gen. Ross was killed.",
+        "side": "american",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-bombardment",
+        "points": [
+          [39.250, -76.550],
+          [39.260, -76.570]
+        ],
+        "label": "Naval Attack",
+        "description": "British ships shelling the fort.",
+        "side": "british",
+        "type": "naval"
+      }
+    ],
+    "zones": [
+      {
+        "id": "baltimore-defenses",
+        "points": [
+          [39.300, -76.620],
+          [39.300, -76.550],
+          [39.280, -76.550],
+          [39.280, -76.620]
+        ],
+        "label": "Rodgers Bastion",
+        "description": "Major land fortifications east of the city.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of plattsburgh": {
+    "name": "Battle of Plattsburgh",
+    "date": "September 11, 1814",
+    "location": "Plattsburgh, New York",
+    "center": [44.690, -73.440],
+    "zoom": 11,
+    "description": "Crucial naval and land victory near Lake Champlain.",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Stopped British invasion from Canada; led to Treaty of Ghent.",
+    "commanders": {
+      "american": ["Alexander Macomb", "Thomas Macdonough"],
+      "british": ["George Prevost", "George Downie"]
+    },
+    "casualties": {
+      "american": "104 killed/wounded",
+      "british": "600+ killed/wounded/captured"
+    },
+    "markers": [
+      {
+        "id": "macdonough-victory",
+        "lat": 44.685,
+        "lng": -73.420,
+        "label": "Naval Engagement",
+        "description": "Macdonough's fleet defeats British in the bay.",
+        "side": "american",
+        "type": "event"
+      },
+      {
+        "id": "saranac-river",
+        "lat": 44.695,
+        "lng": -73.455,
+        "label": "Saranac River Crossing",
+        "description": "Prevost failed to force the river crossings.",
+        "side": "british",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "british-withdrawal",
+        "points": [
+          [44.700, -73.450],
+          [44.800, -73.400],
+          [45.000, -73.350]
+        ],
+        "label": "Prevost's Retreat",
+        "description": "British retreat back to Canada after naval loss.",
+        "side": "british",
+        "type": "retreat"
+      }
+    ],
+    "zones": [
+      {
+        "id": "plattsburgh-forts",
+        "points": [
+          [44.692, -73.452],
+          [44.688, -73.452],
+          [44.688, -73.445],
+          [44.692, -73.445]
+        ],
+        "label": "Fort Moreau/Brown/Scott",
+        "description": "American land fortifications.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of new orleans": {
+    "name": "Battle of New Orleans",
+    "date": "January 8, 1815",
+    "location": "Chalmette, Louisiana",
+    "center": [29.940, -89.990],
+    "zoom": 12,
+    "description": "Final major battle of the War of 1812 (fought after treaty).",
+    "outcome": "american_victory",
+    "outcomeLabel": "American Victory",
+    "significance": "Andrew Jackson became a national hero; preserved LA Purchase.",
+    "commanders": {
+      "american": ["Andrew Jackson"],
+      "british": ["Edward Pakenham"]
+    },
+    "casualties": {
+      "american": "71 killed/wounded",
+      "british": "2,000+ killed/wounded/captured"
+    },
+    "markers": [
+      {
+        "id": "line-jackson",
+        "lat": 29.943,
+        "lng": -89.993,
+        "label": "Line Jackson",
+        "description": "Earthworks along the Rodriguez Canal.",
+        "side": "american",
+        "type": "fortification"
+      },
+      {
+        "id": "pakenham-death",
+        "lat": 29.938,
+        "lng": -89.985,
+        "label": "Pakenham's Fall",
+        "description": "Where the British commander was mortally wounded.",
+        "side": "british",
+        "type": "commander"
+      }
+    ],
+    "movements": [
+      {
+        "id": "main-british-assault",
+        "points": [
+          [29.930, -89.970],
+          [29.940, -89.990]
+        ],
+        "label": "British Attack",
+        "description": "Frontal assault across open ground in heavy fog.",
+        "side": "british",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "chalmette-battlefield",
+        "points": [
+          [29.950, -90.000],
+          [29.950, -89.980],
+          [29.930, -89.980],
+          [29.930, -90.000]
+        ],
+        "label": "Chalmette Plain",
+        "description": "Narrow strip between Mississippi River and Cypress Swamp.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of fort sumter": {
+    "name": "Battle of Fort Sumter",
+    "date": "April 12–13, 1861",
+    "location": "Charleston, South Carolina",
+    "center": [32.752, -79.874],
+    "zoom": 12,
+    "description": "The opening engagement of the American Civil War.",
+    "outcome": "other_victory",
+    "outcomeLabel": "Confederate Victory",
+    "significance": "Triggered the start of the Civil War.",
+    "commanders": {
+      "american": ["Robert Anderson"],
+      "other": ["P.G.T. Beauregard"]
+    },
+    "casualties": {
+      "american": "None (combat), 1 accidental during salute",
+      "other": "None"
+    },
+    "markers": [
+      {
+        "id": "fort-sumter-island",
+        "lat": 32.7523,
+        "lng": -79.8747,
+        "label": "Fort Sumter",
+        "description": "Island fortification in Charleston Harbor.",
+        "side": "american",
+        "type": "fortification"
+      },
+      {
+        "id": "fort-johnson",
+        "lat": 32.751,
+        "lng": -79.897,
+        "label": "Fort Johnson",
+        "description": "Site of the first shot fired.",
+        "side": "neutral",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "union-evacuation",
+        "points": [
+          [32.752, -79.874],
+          [32.760, -79.850],
+          [32.700, -79.800]
+        ],
+        "label": "Union Evacuation",
+        "description": "Anderson's garrison leaving the fort.",
+        "side": "american",
+        "type": "retreat"
+      }
+    ],
+    "zones": [
+      {
+        "id": "harbor-bombardment",
+        "points": [
+          [32.780, -79.930],
+          [32.780, -79.850],
+          [32.740, -79.850],
+          [32.740, -79.930]
+        ],
+        "label": "Charleston Harbor",
+        "description": "Area of Confederate battery positions.",
+        "type": "territory",
+        "side": "neutral"
+      }
+    ]
+  },
+  "first battle of bull run": {
+    "name": "First Battle of Bull Run",
+    "date": "July 21, 1861",
+    "location": "Manassas, Virginia",
+    "center": [38.815, -77.525],
+    "zoom": 12,
+    "description": "The first major land battle of the Civil War.",
+    "outcome": "other_victory",
+    "outcomeLabel": "Confederate Victory",
+    "significance": "Ended hopes for a short, easy war.",
+    "commanders": {
+      "american": ["Irvin McDowell"],
+      "other": ["P.G.T. Beauregard", "Joseph E. Johnston"]
+    },
+    "casualties": {
+      "american": "460 killed, 1,124 wounded",
+      "other": "387 killed, 1,582 wounded"
+    },
+    "markers": [
+      {
+        "id": "henry-house-hill",
+        "lat": 38.812,
+        "lng": -77.522,
+        "label": "Henry House Hill",
+        "description": "Site where Jackson earned the name 'Stonewall'.",
+        "side": "neutral",
+        "type": "position"
+      },
+      {
+        "id": "stone-bridge",
+        "lat": 38.823,
+        "lng": -77.502,
+        "label": "Stone Bridge",
+        "description": "Initial engagement point over Bull Run.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "union-flank",
+        "points": [
+          [38.840, -77.550],
+          [38.825, -77.540],
+          [38.818, -77.530]
+        ],
+        "label": "Union Flanking Column",
+        "description": "McDowell's attempt to turn the Confederate left.",
+        "side": "american",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "manassas-junction",
+        "points": [
+          [38.820, -77.540],
+          [38.810, -77.510],
+          [38.800, -77.530]
+        ],
+        "label": "The Battlefield",
+        "description": "Centerville-Manassas area.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of shiloh": {
+    "name": "Battle of Shiloh",
+    "date": "April 6–7, 1862",
+    "location": "Hardin County, Tennessee",
+    "center": [35.151, -88.322],
+    "zoom": 12,
+    "description": "Unexpectedly bloody battle in the Western Theater.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Union gained ground in the West at immense cost.",
+    "commanders": {
+      "american": ["Ulysses S. Grant"],
+      "other": ["Albert Sidney Johnston", "P.G.T. Beauregard"]
+    },
+    "casualties": {
+      "american": "1,754 killed, 8,408 wounded",
+      "other": "1,728 killed, 8,012 wounded"
+    },
+    "markers": [
+      {
+        "id": "hornets-nest",
+        "lat": 35.148,
+        "lng": -88.322,
+        "label": "The Hornet's Nest",
+        "description": "Site of stubborn Union defense on Day 1.",
+        "side": "american",
+        "type": "position"
+      },
+      {
+        "id": "pittsburg-landing",
+        "lat": 35.151,
+        "lng": -88.310,
+        "label": "Pittsburg Landing",
+        "description": "Grant's base and site of Buell's reinforcements.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "confederate-surprise",
+        "points": [
+          [35.120, -88.350],
+          [35.130, -88.330],
+          [35.145, -88.325]
+        ],
+        "label": "Confederate Assault",
+        "description": "Initial surprise attack on Day 1.",
+        "side": "neutral",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "sunken-road",
+        "points": [
+          [35.150, -88.325],
+          [35.145, -88.325],
+          [35.145, -88.320],
+          [35.150, -88.320]
+        ],
+        "label": "Sunken Road",
+        "description": "Natural defensive position used by the Union.",
+        "type": "battlefield",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of antietam": {
+    "name": "Battle of Antietam",
+    "date": "September 17, 1862",
+    "location": "Sharpsburg, Maryland",
+    "center": [39.473, -77.744],
+    "zoom": 12,
+    "description": "The bloodiest single day in American military history.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Strategic Victory",
+    "significance": "Gave Lincoln opportunity for Emancipation Proclamation.",
+    "commanders": {
+      "american": ["George B. McClellan"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "2,108 killed, 9,540 wounded",
+      "other": "1,546 killed, 7,752 wounded"
+    },
+    "markers": [
+      {
+        "id": "bloody-lane",
+        "lat": 39.471,
+        "lng": -77.737,
+        "label": "Bloody Lane",
+        "description": "Sunken road where massive casualties occurred.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "burnside-bridge",
+        "lat": 39.451,
+        "lng": -77.732,
+        "label": "Burnside Bridge",
+        "description": "Union crossing contested by Georgians.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "ap-hill-arrival",
+        "points": [
+          [39.440, -77.770],
+          [39.450, -77.750],
+          [39.460, -77.740]
+        ],
+        "label": "A.P. Hill's Flank",
+        "description": "Late-day arrival from Harpers Ferry to save Lee's right.",
+        "side": "neutral",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "the-cornfield",
+        "points": [
+          [39.485, -77.750],
+          [39.485, -77.740],
+          [39.475, -77.740],
+          [39.475, -77.750]
+        ],
+        "label": "The Cornfield",
+        "description": "Site of brutal fighting in the early morning.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of fredericksburg": {
+    "name": "Battle of Fredericksburg",
+    "date": "December 11–15, 1862",
+    "location": "Fredericksburg, Virginia",
+    "center": [38.293, -77.467],
+    "zoom": 12,
+    "description": "Union disaster at Marye's Heights.",
+    "outcome": "other_victory",
+    "outcomeLabel": "Confederate Victory",
+    "significance": "Crushing blow to Union morale.",
+    "commanders": {
+      "american": ["Ambrose Burnside"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "1,284 killed, 9,600 wounded",
+      "other": "608 killed, 4,116 wounded"
+    },
+    "markers": [
+      {
+        "id": "stone-wall",
+        "lat": 38.295,
+        "lng": -77.477,
+        "label": "The Stone Wall",
+        "description": "Confederate defensive line at the base of Marye's Heights.",
+        "side": "neutral",
+        "type": "fortification"
+      },
+      {
+        "id": "pontoon-bridges",
+        "lat": 38.303,
+        "lng": -77.460,
+        "label": "Pontoon Crossings",
+        "description": "Union attempt to bridge the Rappahannock.",
+        "side": "american",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "union-charge",
+        "points": [
+          [38.298, -77.468],
+          [38.296, -77.476]
+        ],
+        "label": "Frontal Assault",
+        "description": "Repeated, failed charges against the stone wall.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "maryes-heights",
+        "points": [
+          [38.298, -77.482],
+          [38.290, -77.482],
+          [38.290, -77.476],
+          [38.298, -77.476]
+        ],
+        "label": "Marye's Heights",
+        "description": "Key high ground held by Longstreet.",
+        "type": "territory",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of chancellorsville": {
+    "name": "Battle of Chancellorsville",
+    "date": "April 30 – May 6, 1863",
+    "location": "Spotsylvania County, Virginia",
+    "center": [38.300, -77.650],
+    "zoom": 11,
+    "description": "Lee's 'Perfect Battle' and victory over Hooke.",
+    "outcome": "other_victory",
+    "outcomeLabel": "Confederate Victory",
+    "significance": "Stonewall Jackson mortally wounded by friendly fire.",
+    "commanders": {
+      "american": ["Joseph Hooker"],
+      "other": ["Robert E. Lee", "Stonewall Jackson"]
+    },
+    "casualties": {
+      "american": "1,606 killed, 9,762 wounded",
+      "other": "1,665 killed, 9,081 wounded"
+    },
+    "markers": [
+      {
+        "id": "chancellorsville-inn",
+        "lat": 38.310,
+        "lng": -77.637,
+        "label": "Chancellorsville Inn",
+        "description": "Hooker's headquarters during the battle.",
+        "side": "american",
+        "type": "landmark"
+      },
+      {
+        "id": "jackson-wound",
+        "lat": 38.303,
+        "lng": -77.652,
+        "label": "Jackson's Wounding",
+        "description": "Spot where Jackson was shot by his own men.",
+        "side": "neutral",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "jackson-flank",
+        "points": [
+          [38.290, -77.640],
+          [38.270, -77.680],
+          [38.310, -77.690],
+          [38.310, -77.660]
+        ],
+        "label": "Jackson's Flank March",
+        "description": "Secret 12-mile march to crush the Union right flank.",
+        "side": "neutral",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "the-wilderness",
+        "points": [
+          [38.320, -77.720],
+          [38.320, -77.620],
+          [38.280, -77.620],
+          [38.280, -77.720]
+        ],
+        "label": "The Wilderness Area",
+        "description": "Dense forest making movement difficult.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of gettysburg": {
+    "name": "Battle of Gettysburg",
+    "date": "July 1–3, 1863",
+    "location": "Gettysburg, Pennsylvania",
+    "center": [39.815, -77.235],
+    "zoom": 12,
+    "description": "Turning point of the Civil War; high tide of the Confederacy.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Lee's second invasion of the North ended in failure.",
+    "commanders": {
+      "american": ["George G. Meade"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "3,155 killed, 14,529 wounded",
+      "other": "3,903 killed, 18,735 wounded"
+    },
+    "markers": [
+      {
+        "id": "little-round-top",
+        "lat": 39.791,
+        "lng": -77.236,
+        "label": "Little Round Top",
+        "description": "Site of the 20th Maine's bayonet charge.",
+        "side": "american",
+        "type": "position"
+      },
+      {
+        "id": "high-water-mark",
+        "lat": 39.812,
+        "lng": -77.236,
+        "label": "The Angle",
+        "description": "High water mark of Pickett's Charge.",
+        "side": "neutral",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "picketts-charge",
+        "points": [
+          [39.805, -77.250],
+          [39.812, -77.236]
+        ],
+        "label": "Pickett's Charge",
+        "description": "Massive Confederate infantry assault on Day 3.",
+        "side": "neutral",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "cemetery-ridge",
+        "points": [
+          [39.820, -77.235],
+          [39.810, -77.235],
+          [39.795, -77.235]
+        ],
+        "label": "Union Line",
+        "description": "Primary Union defensive position (Fishhook).",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "siege of vicksburg": {
+    "name": "Siege of Vicksburg",
+    "date": "May 18 – July 4, 1863",
+    "location": "Vicksburg, Mississippi",
+    "center": [32.340, -90.860],
+    "zoom": 12,
+    "description": "Campaign to capture the last Confederate stronghold on the Mississippi.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Split the Confederacy in two.",
+    "commanders": {
+      "american": ["Ulysses S. Grant"],
+      "other": ["John C. Pemberton"]
+    },
+    "casualties": {
+      "american": "4,835 (campaign)",
+      "other": "3,202 killed/wounded, 29,495 surrendered"
+    },
+    "markers": [
+      {
+        "id": "pemberton-hq",
+        "lat": 32.350,
+        "lng": -90.878,
+        "label": "Confederate HQ",
+        "description": "Pemberton's headquarters during the siege.",
+        "side": "neutral",
+        "type": "landmark"
+      },
+      {
+        "id": "shirley-house",
+        "lat": 32.348,
+        "lng": -90.849,
+        "label": "Shirley House",
+        "description": "Only surviving wartime structure in the park.",
+        "side": "american",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "grant-crossing",
+        "points": [
+          [32.000, -91.100],
+          [32.100, -90.900],
+          [32.300, -90.850]
+        ],
+        "label": "Grant's March",
+        "description": "Movement of Union troops to the south and east of Vicksburg.",
+        "side": "american",
+        "type": "encirclement"
+      }
+    ],
+    "zones": [
+      {
+        "id": "siege-lines",
+        "points": [
+          [32.370, -90.880],
+          [32.350, -90.830],
+          [32.300, -90.850],
+          [32.320, -90.900]
+        ],
+        "label": "Vicksburg Perimeter",
+        "description": "Confederate defensive trenches.",
+        "type": "fortification",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of chickamauga": {
+    "name": "Battle of Chickamauga",
+    "date": "September 18–20, 1863",
+    "location": "Walker County, Georgia",
+    "center": [34.910, -85.260],
+    "zoom": 12,
+    "description": "Bloodiest battle in the Western Theater.",
+    "outcome": "other_victory",
+    "outcomeLabel": "Confederate Victory",
+    "significance": "End of the Union Chickamauga Campaign.",
+    "commanders": {
+      "american": ["William Rosecrans"],
+      "other": ["Braxton Bragg", "James Longstreet"]
+    },
+    "casualties": {
+      "american": "1,657 killed, 9,756 wounded",
+      "other": "2,312 killed, 14,674 wounded"
+    },
+    "markers": [
+      {
+        "id": "snodgrass-hill",
+        "lat": 34.925,
+        "lng": -85.265,
+        "label": "Snodgrass Hill",
+        "description": "Thomas's stand earning him 'Rock of Chickamauga'.",
+        "side": "american",
+        "type": "position"
+      },
+      {
+        "id": "the-gap",
+        "lat": 34.915,
+        "lng": -85.258,
+        "label": "Brotherton Cabin Gap",
+        "description": "Where Longstreet's men broke through.",
+        "side": "neutral",
+        "type": "event"
+      }
+    ],
+    "movements": [
+      {
+        "id": "longstreet-breakthrough",
+        "points": [
+          [34.910, -85.250],
+          [34.915, -85.258],
+          [34.920, -85.270]
+        ],
+        "label": "Confederate Breakthrough",
+        "description": "A massive column exploitation of a hole in the Union line.",
+        "side": "neutral",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "battlefield-core",
+        "points": [
+          [34.940, -85.280],
+          [34.940, -85.240],
+          [34.880, -85.240],
+          [34.880, -85.280]
+        ],
+        "label": "Chickamauga Field",
+        "description": "Area of dense woods and small clearings.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of the wilderness": {
+    "name": "Battle of the Wilderness",
+    "date": "May 5–7, 1864",
+    "location": "Spotsylvania County, Virginia",
+    "center": [38.318, -77.755],
+    "zoom": 12,
+    "description": "First clash between Grant and Lee.",
+    "outcome": "inconclusive",
+    "outcomeLabel": "Inconclusive (Tactical Draw)",
+    "significance": "Grant continued south instead of retreating.",
+    "commanders": {
+      "american": ["Ulysses S. Grant"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "2,246 killed, 12,037 wounded",
+      "other": "1,477 killed, 7,866 wounded"
+    },
+    "markers": [
+      {
+        "id": "saunders-field",
+        "lat": 38.322,
+        "lng": -77.766,
+        "label": "Saunders Field",
+        "description": "Site of initial fighting on the Orange Turnpike.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "tapp-farm",
+        "lat": 38.307,
+        "lng": -77.747,
+        "label": "Widow Tapp Farm",
+        "description": "Lee personally tried to lead a charge here.",
+        "side": "neutral",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "grant-advance",
+        "points": [
+          [38.340, -77.750],
+          [38.320, -77.750],
+          [38.300, -77.750]
+        ],
+        "label": "Union Push South",
+        "description": "Overland Campaign movement through the forest.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "wilderness-forest",
+        "points": [
+          [38.330, -77.780],
+          [38.330, -77.730],
+          [38.290, -77.730],
+          [38.290, -77.780]
+        ],
+        "label": "The Wilderness",
+        "description": "Thick undergrowth that caught fire during the battle.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of spotsylvania court house": {
+    "name": "Battle of Spotsylvania Court House",
+    "date": "May 8–21, 1864",
+    "location": "Spotsylvania, Virginia",
+    "center": [38.225, -77.600],
+    "zoom": 12,
+    "description": "Continuation of Grant's Overland Campaign.",
+    "outcome": "inconclusive",
+    "outcomeLabel": "Inconclusive",
+    "significance": "Included the 'Bloody Angle' - 20 hours of hand-to-hand combat.",
+    "commanders": {
+      "american": ["Ulysses S. Grant"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "18,000 total",
+      "other": "12,000 total"
+    },
+    "markers": [
+      {
+        "id": "bloody-angle",
+        "lat": 38.232,
+        "lng": -77.604,
+        "label": "The Bloody Angle",
+        "description": "Crucial bend in the Mule Shoe salient.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "sedgwick-death",
+        "lat": 38.236,
+        "lng": -77.611,
+        "label": "Sedgwick Memorial",
+        "description": "Where Gen. Sedgwick was killed by a sniper.",
+        "side": "american",
+        "type": "commander"
+      }
+    ],
+    "movements": [
+      {
+        "id": "hancock-assault",
+        "points": [
+          [38.245, -77.605],
+          [38.235, -77.604]
+        ],
+        "label": "Hancock's Charge",
+        "description": "II Corps assault on the Mule Shoe.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "mule-shoe",
+        "points": [
+          [38.236, -77.610],
+          [38.240, -77.600],
+          [38.230, -77.595],
+          [38.225, -77.605]
+        ],
+        "label": "Mule Shoe Salient",
+        "description": "Confederate earthworks forming a large salient.",
+        "type": "fortification",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of cold harbor": {
+    "name": "Battle of Cold Harbor",
+    "date": "May 31 – June 12, 1864",
+    "location": "Mechanicsville, Virginia",
+    "center": [37.590, -77.280],
+    "zoom": 12,
+    "description": "Grant's most regretted assault; heavy Union losses.",
+    "outcome": "other_victory",
+    "outcomeLabel": "Confederate Victory",
+    "significance": "Solidified Lee's defensive genius in trench warfare.",
+    "commanders": {
+      "american": ["Ulysses S. Grant"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "1,844 killed, 9,077 wounded",
+      "other": "83 killed, 3,380 wounded"
+    },
+    "markers": [
+      {
+        "id": "old-cold-harbor",
+        "lat": 37.587,
+        "lng": -77.285,
+        "label": "Old Cold Harbor",
+        "description": "Strategic crossroads center of the battle.",
+        "side": "neutral",
+        "type": "landmark"
+      },
+      {
+        "id": "confederate-trench",
+        "lat": 37.591,
+        "lng": -77.295,
+        "label": "Confederate Works",
+        "description": "Sophisticated defensive earthworks.",
+        "side": "neutral",
+        "type": "fortification"
+      }
+    ],
+    "movements": [
+      {
+        "id": "union-suicide-charge",
+        "points": [
+          [37.585, -77.275],
+          [37.588, -77.290]
+        ],
+        "label": "June 3rd Assault",
+        "description": "Failed Union charge that lost 7,000 men in minutes.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "trench-lines",
+        "points": [
+          [37.620, -77.300],
+          [37.600, -77.280],
+          [37.560, -77.260]
+        ],
+        "label": "Siege Lines",
+        "description": "Miles of entrenchments stretching south.",
+        "type": "fortification",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of atlanta": {
+    "name": "Battle of Atlanta",
+    "date": "July 22, 1864",
+    "location": "Atlanta, Georgia",
+    "center": [33.745, -84.350],
+    "zoom": 12,
+    "description": "Major battle in the Atlanta Campaign.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Ensured the eventual fall of Atlanta.",
+    "commanders": {
+      "american": ["William T. Sherman", "James B. McPherson"],
+      "other": ["John Bell Hood"]
+    },
+    "casualties": {
+      "american": "3,641 killed/wounded",
+      "other": "5,500 killed/wounded"
+    },
+    "markers": [
+      {
+        "id": "mcpherson-death",
+        "lat": 33.743,
+        "lng": -84.340,
+        "label": "McPherson Memorial",
+        "description": "Where General McPherson was killed.",
+        "side": "american",
+        "type": "commander"
+      },
+      {
+        "id": "troup-hurt-house",
+        "lat": 33.754,
+        "lng": -84.349,
+        "label": "Troup Hurt House",
+        "description": "Scene of a Confederate breakthrough and counterattack.",
+        "side": "neutral",
+        "type": "landmark"
+      }
+    ],
+    "movements": [
+      {
+        "id": "hood-sortie",
+        "points": [
+          [33.730, -84.360],
+          [33.745, -84.340]
+        ],
+        "label": "Hardee's Attack",
+        "description": "Confederate flanking attempt against Union left.",
+        "side": "neutral",
+        "type": "flanking"
+      }
+    ],
+    "zones": [
+      {
+        "id": "atlanta-forts",
+        "points": [
+          [33.760, -84.380],
+          [33.760, -84.320],
+          [33.720, -84.320],
+          [33.720, -84.380]
+        ],
+        "label": "Atlanta Perimeter",
+        "description": "Confederate defensive ring around the city.",
+        "type": "fortification",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of franklin": {
+    "name": "Battle of Franklin",
+    "date": "November 30, 1864",
+    "location": "Franklin, Tennessee",
+    "center": [35.918, -86.868],
+    "zoom": 13,
+    "description": "One of the worst disasters for the Confederate Army.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Destroyed the Army of Tennessee's effectiveness.",
+    "commanders": {
+      "american": ["John Schofield"],
+      "other": ["John Bell Hood"]
+    },
+    "casualties": {
+      "american": "189 killed, 1,033 wounded",
+      "other": "1,750 killed, 3,800 wounded, 6 Generals dead"
+    },
+    "markers": [
+      {
+        "id": "carnton-plantation",
+        "lat": 35.908,
+        "lng": -86.858,
+        "label": "Carnton",
+        "description": "Hospital for Confederate wounded.",
+        "side": "neutral",
+        "type": "landmark"
+      },
+      {
+        "id": "carter-house",
+        "lat": 35.916,
+        "lng": -86.870,
+        "label": "Carter House",
+        "description": "Center of the Union defensive line.",
+        "side": "american",
+        "type": "position"
+      }
+    ],
+    "movements": [
+      {
+        "id": "hood-assault",
+        "points": [
+          [35.890, -86.870],
+          [35.910, -86.870]
+        ],
+        "label": "Confederate Charge",
+        "description": "Massive frontal assault without artillery support.",
+        "side": "neutral",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "union-works",
+        "points": [
+          [35.920, -86.885],
+          [35.920, -86.855],
+          [35.913, -86.870]
+        ],
+        "label": "Defensive Arch",
+        "description": "Union breastworks around the town.",
+        "type": "fortification",
+        "side": "american"
+      }
+    ]
+  },
+  "battle of nashville": {
+    "name": "Battle of Nashville",
+    "date": "December 15–16, 1864",
+    "location": "Nashville, Tennessee",
+    "center": [36.085, -86.800],
+    "zoom": 12,
+    "description": "Decisive Union victory ending the war in Tennessee.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Practically destroyed the Confederate Army of Tennessee.",
+    "commanders": {
+      "american": ["George H. Thomas"],
+      "other": ["John Bell Hood"]
+    },
+    "casualties": {
+      "american": "3,061",
+      "other": "6,000 (inc. captures)"
+    },
+    "markers": [
+      {
+        "id": "shy-hill",
+        "lat": 36.079,
+        "lng": -86.822,
+        "label": "Shy's Hill",
+        "description": "Confederate left flank that was crushed on Day 2.",
+        "side": "neutral",
+        "type": "event"
+      },
+      {
+        "id": "fort-negley",
+        "lat": 36.143,
+        "lng": -86.775,
+        "label": "Fort Negley",
+        "description": "Largest inland stone fort built during the war.",
+        "side": "american",
+        "type": "fortification"
+      }
+    ],
+    "movements": [
+      {
+        "id": "union-sweep",
+        "points": [
+          [36.120, -86.850],
+          [36.080, -86.830]
+        ],
+        "label": "Thomas's Grand Attack",
+        "description": "Vast wheeling movement against the Confederate left.",
+        "side": "american",
+        "type": "advance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "confederate-final-line",
+        "points": [
+          [36.080, -86.830],
+          [36.070, -86.760],
+          [36.060, -86.800]
+        ],
+        "label": "Hood's Line",
+        "description": "Second day Confederate defensive position.",
+        "type": "battlefield",
+        "side": "neutral"
+      }
+    ]
+  },
+  "battle of appomattox court house": {
+    "name": "Battle of Appomattox Court House",
+    "date": "April 9, 1865",
+    "location": "Appomattox, Virginia",
+    "center": [37.377, -78.796],
+    "zoom": 13,
+    "description": "Final engagement and surrender of Robert E. Lee.",
+    "outcome": "american_victory",
+    "outcomeLabel": "Union Victory",
+    "significance": "Effectively ended the American Civil War.",
+    "commanders": {
+      "american": ["Ulysses S. Grant"],
+      "other": ["Robert E. Lee"]
+    },
+    "casualties": {
+      "american": "164 killed/wounded",
+      "other": "500 killed/wounded, 28,000 surrendered"
+    },
+    "markers": [
+      {
+        "id": "mclean-house",
+        "lat": 37.377,
+        "lng": -78.796,
+        "label": "McLean House",
+        "description": "Location of Lee's surrender to Grant.",
+        "side": "neutral",
+        "type": "landmark"
+      },
+      {
+        "id": "lee-hq",
+        "lat": 37.382,
+        "lng": -78.791,
+        "label": "Lee's HQ",
+        "description": "Site of Robert E. Lee's final camp.",
+        "side": "neutral",
+        "type": "commander"
+      }
+    ],
+    "movements": [
+      {
+        "id": "union-encirclement",
+        "points": [
+          [37.370, -78.820],
+          [37.365, -78.800],
+          [37.370, -78.780]
+        ],
+        "label": "Final Blockade",
+        "description": "Union infantry and cavalry blocking Lee's retreat.",
+        "side": "american",
+        "type": "encirclement"
+      }
+    ],
+    "zones": [
+      {
+        "id": "surrender-village",
+        "points": [
+          [37.380, -78.800],
+          [37.380, -78.790],
+          [37.370, -78.790],
+          [37.370, -78.800]
+        ],
+        "label": "Appomattox Village",
+        "description": "Small village serving as the backdrop for the surrender.",
+        "type": "territory",
+        "side": "neutral"
+      }
+    ]
+  }
+}

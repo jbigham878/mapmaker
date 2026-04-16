@@ -908,12 +908,45 @@ body {
 .map-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.55);
+  background: rgba(15, 23, 42, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   backdrop-filter: blur(2px);
+}
+
+.map-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 360px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.map-loading-cannon {
+  font-size: 32px;
+  animation: cannon-rock 1.4s ease-in-out infinite;
+}
+
+@keyframes cannon-rock {
+  0%, 100% { transform: rotate(-8deg) scale(1);   }
+  50%       { transform: rotate(8deg)  scale(1.1); }
+}
+
+.map-loading-fact {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.map-loading-fact.fact-visible {
+  opacity: 1;
 }
 
 /* ─── Error ──────────────────────────────────────────── */
