@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
-import { BattleData, Side } from '../types'
+import { BattleData } from '../types'
 import { BATTLE_CATEGORIES, CAMPAIGNS, Campaign } from '../data/battles'
 
 const ALL_BATTLES = BATTLE_CATEGORIES.flatMap(cat =>
