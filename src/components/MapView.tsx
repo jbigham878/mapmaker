@@ -113,6 +113,36 @@ function makeArrowIcon(color: string, bearing: number): L.DivIcon {
   })
 }
 
+const PHASE_LABELS = [
+  'Opening Positions',
+  'First Moves',
+  'Main Engagement',
+  'Turning Point',
+  'Aftermath',
+]
+
+// Auto-assign phase from element type when no explicit phase is set
+const MARKER_PHASE: Partial<Record<string, number>> = {
+  fortification: 1, commander: 1, landmark: 1,
+  position: 1, artillery: 2,
+  event: 3,
+}
+const MOVEMENT_PHASE: Partial<Record<string, number>> = {
+  advance: 2, naval: 2,
+  flanking: 3,
+  encirclement: 4,
+  retreat: 5,
+}
+const ZONE_PHASE: Partial<Record<string, number>> = {
+  encampment: 1, fortification: 1,
+  battlefield: 3,
+  territory: 5,
+}
+
+function resolvePhase(explicit: number | undefined, typeMap: Partial<Record<string, number>>, type: string): number {
+  return explicit ?? typeMap[type] ?? 2
+}
+
 function FlyToCenter({ center, zoom }: { center: [number, number]; zoom: number }) {
   const map = useMap()
   useEffect(() => { map.flyTo(center, zoom, { duration: 1.5 }) }, [center, zoom, map])
@@ -130,7 +160,11 @@ interface Props {
 
 export default function MapView({ battle, loading, mainBattle, compareBattle, activeView, onSwitchView }: Props) {
   const [tile, setTile] = useState<TileKey>('map')
+  const [phase, setPhase] = useState(1)
   const compareMode = !!(mainBattle && compareBattle)
+
+  // Reset to opening positions when battle changes
+  useEffect(() => { setPhase(1) }, [battle?.name])
 
   // 'T' key cycles tile styles
   useEffect(() => {
@@ -205,6 +239,38 @@ export default function MapView({ battle, loading, mainBattle, compareBattle, ac
         </div>
       )}
 
+      {battle && (
+        <div className="phase-slider-wrap">
+          <div className="phase-slider-header">
+            <span className="phase-current-label">{PHASE_LABELS[phase - 1]}</span>
+            <span className="phase-counter">{phase} / 5</span>
+          </div>
+          <div className="phase-track">
+            {PHASE_LABELS.map((label, i) => (
+              <button
+                key={i}
+                className={`phase-tick${phase === i + 1 ? ' active' : ''}${phase > i + 1 ? ' past' : ''}`}
+                onClick={() => setPhase(i + 1)}
+                title={label}
+              />
+            ))}
+            <input
+              type="range"
+              min={1}
+              max={5}
+              value={phase}
+              onChange={e => setPhase(Number(e.target.value))}
+              className="phase-slider"
+            />
+          </div>
+          <div className="phase-tick-labels">
+            {PHASE_LABELS.map((label, i) => (
+              <span key={i} className={`phase-tick-label${phase === i + 1 ? ' active' : ''}`}>{label}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
       <MapContainer center={[39.5, -98.35]} zoom={4} style={{ width: '100%', height: '100%' }}>
         <TileLayer key={tile} attribution={TILE_LAYERS[tile].attribution} url={TILE_LAYERS[tile].url} />
 
@@ -212,46 +278,52 @@ export default function MapView({ battle, loading, mainBattle, compareBattle, ac
           <>
             <FlyToCenter center={battle.center} zoom={battle.zoom} />
 
-            {battle.zones.map(zone => {
-              const color = SIDE_COLORS[zone.side] ?? SIDE_COLORS.neutral
-              return (
-                <Polygon key={zone.id} positions={zone.points as any}
-                  pathOptions={{ color, fillColor: color, fillOpacity: 0.12, weight: 1.5, opacity: 0.5, dashArray: '5 4' }}>
-                  <Tooltip sticky>{zone.label}</Tooltip>
-                  <Popup minWidth={200} maxWidth={280}><PopupContent title={zone.label} subtitle={`${zone.type} · ${zone.side}`} body={zone.description} /></Popup>
-                </Polygon>
-              )
-            })}
+            {battle.zones
+              .filter(z => resolvePhase(z.phase, ZONE_PHASE, z.type) <= phase)
+              .map(zone => {
+                const color = SIDE_COLORS[zone.side] ?? SIDE_COLORS.neutral
+                return (
+                  <Polygon key={zone.id} positions={zone.points as any}
+                    pathOptions={{ color, fillColor: color, fillOpacity: 0.12, weight: 1.5, opacity: 0.5, dashArray: '5 4' }}>
+                    <Tooltip sticky>{zone.label}</Tooltip>
+                    <Popup minWidth={200} maxWidth={280}><PopupContent title={zone.label} subtitle={`${zone.type} · ${zone.side}`} body={zone.description} /></Popup>
+                  </Polygon>
+                )
+              })}
 
-            {battle.movements.map(movement => {
-              const color = SIDE_COLORS[movement.side] ?? SIDE_COLORS.neutral
-              return (
-                <Fragment key={movement.id}>
-                  <Polyline positions={movement.points as any} pathOptions={{
-                    color, weight: 3, opacity: 0.85,
-                    dashArray: movement.type === 'retreat' ? '10 7' : movement.type === 'encirclement' ? '4 4' : undefined,
-                  }}>
-                    <Tooltip sticky>{movement.label}</Tooltip>
-                    <Popup minWidth={200} maxWidth={280}><PopupContent title={movement.label} subtitle={`${movement.type} · ${movement.side}`} body={movement.description} /></Popup>
-                  </Polyline>
-                  {getArrows(movement.points).map((a, i) => (
-                    <Marker key={`${movement.id}-a${i}`} position={a.pos} icon={makeArrowIcon(color, a.bearing)} interactive={false} />
-                  ))}
-                </Fragment>
-              )
-            })}
+            {battle.movements
+              .filter(m => resolvePhase(m.phase, MOVEMENT_PHASE, m.type) <= phase)
+              .map(movement => {
+                const color = SIDE_COLORS[movement.side] ?? SIDE_COLORS.neutral
+                return (
+                  <Fragment key={movement.id}>
+                    <Polyline positions={movement.points as any} pathOptions={{
+                      color, weight: 3, opacity: 0.85,
+                      dashArray: movement.type === 'retreat' ? '10 7' : movement.type === 'encirclement' ? '4 4' : undefined,
+                    }}>
+                      <Tooltip sticky>{movement.label}</Tooltip>
+                      <Popup minWidth={200} maxWidth={280}><PopupContent title={movement.label} subtitle={`${movement.type} · ${movement.side}`} body={movement.description} /></Popup>
+                    </Polyline>
+                    {getArrows(movement.points).map((a, i) => (
+                      <Marker key={`${movement.id}-a${i}`} position={a.pos} icon={makeArrowIcon(color, a.bearing)} interactive={false} />
+                    ))}
+                  </Fragment>
+                )
+              })}
 
-            {battle.markers.map(marker => {
-              const color = SIDE_COLORS[marker.side] ?? SIDE_COLORS.neutral
-              const radius = MARKER_RADIUS[marker.type] ?? 9
-              return (
-                <CircleMarker key={marker.id} center={[marker.lat, marker.lng]} radius={radius}
-                  pathOptions={{ color: 'rgba(255,255,255,0.8)', weight: 1.5, fillColor: color, fillOpacity: 0.92 }}>
-                  <Tooltip direction="top" offset={[0, -radius]}>{marker.label}</Tooltip>
-                  <Popup minWidth={200} maxWidth={280}><PopupContent title={marker.label} subtitle={`${marker.type} · ${marker.side}`} body={marker.description} /></Popup>
-                </CircleMarker>
-              )
-            })}
+            {battle.markers
+              .filter(m => resolvePhase(m.phase, MARKER_PHASE, m.type) <= phase)
+              .map(marker => {
+                const color = SIDE_COLORS[marker.side] ?? SIDE_COLORS.neutral
+                const radius = MARKER_RADIUS[marker.type] ?? 9
+                return (
+                  <CircleMarker key={marker.id} center={[marker.lat, marker.lng]} radius={radius}
+                    pathOptions={{ color: 'rgba(255,255,255,0.8)', weight: 1.5, fillColor: color, fillOpacity: 0.92 }}>
+                    <Tooltip direction="top" offset={[0, -radius]}>{marker.label}</Tooltip>
+                    <Popup minWidth={200} maxWidth={280}><PopupContent title={marker.label} subtitle={`${marker.type} · ${marker.side}`} body={marker.description} /></Popup>
+                  </CircleMarker>
+                )
+              })}
           </>
         )}
       </MapContainer>

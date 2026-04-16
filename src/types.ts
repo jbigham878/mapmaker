@@ -20,6 +20,7 @@ export interface MapMarker {
   description: string;
   side: Side;
   type: MarkerType;
+  phase?: number;
 }
 
 export interface Movement {
@@ -29,6 +30,7 @@ export interface Movement {
   description: string;
   side: Side;
   type: MovementType;
+  phase?: number;
 }
 
 export interface Zone {
@@ -38,6 +40,7 @@ export interface Zone {
   description: string;
   type: ZoneType;
   side: Side;
+  phase?: number;
 }
 
 export interface BattleData {
