@@ -11,6 +11,42 @@ export interface Campaign {
 
 export const BATTLE_CATEGORIES: BattleCategory[] = [
   {
+    label: 'Napoleonic Wars',
+    battles: [
+      'Battle of Trafalgar',
+      'Battle of Austerlitz',
+      'Battle of Jena',
+      'Battle of Borodino',
+      'Battle of Leipzig',
+      'Battle of Waterloo',
+    ],
+  },
+  {
+    label: 'World War I',
+    battles: [
+      'Battle of the Marne',
+      'Battle of Tannenberg',
+      'Battle of Gallipoli',
+      'Battle of Verdun',
+      'Battle of the Somme',
+      'Battle of Passchendaele',
+      'Battle of Cambrai',
+    ],
+  },
+  {
+    label: 'World War II',
+    battles: [
+      'Battle of Britain',
+      'Battle of Stalingrad',
+      'Battle of Midway',
+      'D-Day — Normandy Landings',
+      'Battle of the Bulge',
+      'Battle of Iwo Jima',
+      'Battle of Berlin',
+      'Operation Market Garden',
+    ],
+  },
+  {
     label: 'Revolutionary War',
     battles: [
       'Battle of Lexington and Concord',
@@ -69,6 +105,45 @@ export const BATTLE_CATEGORIES: BattleCategory[] = [
 ]
 
 export const CAMPAIGNS: Campaign[] = [
+  {
+    label: 'Hundred Days Campaign',
+    era: 'Napoleonic Wars · 1815',
+    battles: [
+      'Battle of Ligny',
+      'Battle of Quatre Bras',
+      'Battle of Waterloo',
+    ],
+  },
+  {
+    label: 'Gallipoli Campaign',
+    era: 'World War I · 1915–1916',
+    battles: [
+      'Battle of Gallipoli',
+      'Battle of Lone Pine',
+      'Battle of Chunuk Bair',
+    ],
+  },
+  {
+    label: 'Pacific Theater',
+    era: 'World War II · 1941–1945',
+    battles: [
+      'Attack on Pearl Harbor',
+      'Battle of Midway',
+      'Battle of Guadalcanal',
+      'Battle of Iwo Jima',
+      'Battle of Okinawa',
+    ],
+  },
+  {
+    label: 'Liberation of Western Europe',
+    era: 'World War II · 1944–1945',
+    battles: [
+      'D-Day — Normandy Landings',
+      'Operation Market Garden',
+      'Battle of the Bulge',
+      'Battle of Berlin',
+    ],
+  },
   {
     label: 'Boston Campaign',
     era: 'Revolutionary War · 1775',

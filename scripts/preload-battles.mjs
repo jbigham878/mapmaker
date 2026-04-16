@@ -30,6 +30,30 @@ if (!TINES_WEBHOOK) {
 }
 
 const BATTLES = [
+  // Napoleonic Wars
+  'Battle of Trafalgar',
+  'Battle of Austerlitz',
+  'Battle of Jena',
+  'Battle of Borodino',
+  'Battle of Leipzig',
+  'Battle of Waterloo',
+  // World War I
+  'Battle of the Marne',
+  'Battle of Tannenberg',
+  'Battle of Gallipoli',
+  'Battle of Verdun',
+  'Battle of the Somme',
+  'Battle of Passchendaele',
+  'Battle of Cambrai',
+  // World War II
+  'Battle of Britain',
+  'Battle of Stalingrad',
+  'Battle of Midway',
+  'D-Day — Normandy Landings',
+  'Battle of the Bulge',
+  'Battle of Iwo Jima',
+  'Battle of Berlin',
+  'Operation Market Garden',
   // Revolutionary War
   'Battle of Lexington and Concord',
   'Battle of Bunker Hill',

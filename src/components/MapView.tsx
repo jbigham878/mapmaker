@@ -59,11 +59,16 @@ function LoadingOverlay() {
 }
 
 const SIDE_COLORS: Record<Side, string> = {
-  american: '#3b82f6',
-  british:  '#ef4444',
-  french:   '#8b5cf6',
-  hessian:  '#22c55e',
-  neutral:  '#94a3b8',
+  american:    '#3b82f6',
+  british:     '#ef4444',
+  french:      '#8b5cf6',
+  hessian:     '#22c55e',
+  neutral:     '#94a3b8',
+  confederate: '#a78bfa',
+  german:      '#6b7280',
+  russian:     '#b91c1c',
+  japanese:    '#f59e0b',
+  ottoman:     '#d97706',
 }
 
 const MARKER_RADIUS: Record<string, number> = {

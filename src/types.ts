@@ -1,4 +1,5 @@
-export type Side = 'american' | 'british' | 'french' | 'hessian' | 'neutral';
+export type Side = 'american' | 'british' | 'french' | 'hessian' | 'neutral'
+  | 'confederate' | 'german' | 'russian' | 'japanese' | 'ottoman';
 export type MarkerType = 'position' | 'commander' | 'landmark' | 'event' | 'artillery' | 'fortification';
 export type MovementType = 'advance' | 'retreat' | 'flanking' | 'naval' | 'encirclement';
 export type ZoneType = 'fortification' | 'battlefield' | 'encampment' | 'territory';

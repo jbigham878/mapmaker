@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { BattleData, Side } from '../types'
 import { BATTLE_CATEGORIES, CAMPAIGNS, Campaign } from '../data/battles'
 
@@ -7,11 +7,16 @@ const ALL_BATTLES = BATTLE_CATEGORIES.flatMap(cat =>
 )
 
 const SIDE_LABELS: Record<string, string> = {
-  american: 'American',
-  british:  'British',
-  french:   'French',
-  hessian:  'Hessian',
-  other:    'Other',
+  american:    'American',
+  british:     'British',
+  french:      'French',
+  hessian:     'Hessian',
+  confederate: 'Confederate',
+  german:      'German',
+  russian:     'Russian',
+  japanese:    'Japanese',
+  ottoman:     'Ottoman',
+  other:       'Other',
 }
 
 interface ActiveCampaign {
@@ -48,6 +53,14 @@ export default function BattlePanel({
 }: Props) {
   const [compareQuery, setCompareQuery] = useState('')
   const [showCompareInput, setShowCompareInput] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const handleShare = useCallback(() => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }, [])
   const compareMode = !!compareBattle
   const [query, setQuery] = useState('')
   const [tab, setTab] = useState<Tab>('battles')
@@ -212,9 +225,23 @@ export default function BattlePanel({
           <div className="battle-info">
             <h2 className="battle-name">{battle.name}</h2>
             <p className="battle-meta">{battle.date} · {battle.location}</p>
-            <span className={`outcome-badge outcome-${battle.outcome}`}>
-              {battle.outcomeLabel}
-            </span>
+            <div className="battle-meta-row">
+              <span className={`outcome-badge outcome-${battle.outcome}`}>
+                {battle.outcomeLabel}
+              </span>
+              <button className="share-btn" onClick={handleShare} title="Copy link">
+                {copied ? (
+                  <span className="share-copied">Copied!</span>
+                ) : (
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                    <polyline points="16 6 12 2 8 6"/>
+                    <line x1="12" y1="2" x2="12" y2="15"/>
+                  </svg>
+                )}
+                {!copied && 'Share'}
+              </button>
+            </div>
 
             {/* Compare UI */}
             {!compareMode && !showCompareInput && (
@@ -299,17 +326,15 @@ export default function BattlePanel({
             <div className="section">
               <div className="section-title">Map Legend</div>
               <div className="legend-items">
-                {(['american', 'british', 'french', 'hessian'] as Side[])
-                  .filter(side =>
-                    battle.markers.some(m => m.side === side) ||
-                    battle.movements.some(m => m.side === side)
-                  )
-                  .map(side => (
-                    <div key={side} className="legend-item">
-                      <div className={`legend-dot side-dot ${side}`} />
-                      <span>{SIDE_LABELS[side]} Forces</span>
-                    </div>
-                  ))}
+                {Array.from(new Set([
+                  ...battle.markers.map(m => m.side),
+                  ...battle.movements.map(m => m.side),
+                ])).filter(s => s !== 'neutral').map(side => (
+                  <div key={side} className="legend-item">
+                    <div className={`legend-dot side-dot ${side}`} />
+                    <span>{SIDE_LABELS[side] ?? side} Forces</span>
+                  </div>
+                ))}
                 <div className="legend-divider" />
                 <div className="legend-item">
                   <div className="legend-line-solid" />

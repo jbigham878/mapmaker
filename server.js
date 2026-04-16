@@ -42,7 +42,8 @@ const VALID_OUTCOMES = new Set([
   'prussian_victory', 'spanish_victory', 'other_victory', 'inconclusive',
 ]);
 
-const VALID_SIDES = new Set(['american', 'british', 'french', 'hessian', 'neutral']);
+const VALID_SIDES = new Set(['american', 'british', 'french', 'hessian', 'neutral',
+  'confederate', 'german', 'russian', 'japanese', 'ottoman']);
 
 function validateCoord(lat, lng, context) {
   const errors = [];

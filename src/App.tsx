@@ -29,6 +29,7 @@ export default function App() {
   const [error, setError]                 = useState<string | null>(null)
   const [history, setHistory]             = useState<BattleData[]>(loadHistory)
   const [activeCampaign, setActiveCampaign] = useState<ActiveCampaign | null>(null)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   // Compare mode
   const [compareBattle, setCompareBattle] = useState<BattleData | null>(null)
@@ -147,7 +148,8 @@ export default function App() {
   function handleExitCampaign() { setActiveCampaign(null) }
 
   return (
-    <div className="app">
+    <div className={`app${sidebarOpen ? ' sidebar-open' : ''}`}>
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} />}
       <aside className="sidebar">
         <div className="sidebar-header">
           <div className="app-title-row">
@@ -159,6 +161,7 @@ export default function App() {
             <h1 className="app-title">MapMaker</h1>
           </div>
           <p className="app-subtitle">Historical Battle Maps</p>
+          <button className="mobile-sidebar-close" onClick={() => setSidebarOpen(false)} aria-label="Close">✕</button>
         </div>
         <BattlePanel
           battle={displayBattle}
@@ -181,6 +184,12 @@ export default function App() {
         />
       </aside>
       <main className="map-area">
+        <button className="mobile-sidebar-toggle" onClick={() => setSidebarOpen(true)}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          Battles
+        </button>
         <MapView
           battle={displayBattle}
           loading={loading || compareLoading}
